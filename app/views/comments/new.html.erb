@@ -1,0 +1,6 @@
+<h2>Add New Comment</h2>
+
+<%= simple_form_for([@post, @comment]) do |f| %>
+  <%= f.input :content %>
+  <%= f.button :submit %>
+<% end %>

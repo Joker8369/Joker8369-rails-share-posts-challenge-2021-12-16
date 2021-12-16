@@ -6,4 +6,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :nickname, presence: true
+  validates_length_of :nickname, maximum: 50, allow_blank: false
 end
