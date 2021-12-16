@@ -11,7 +11,7 @@
           <%= comment.content%><br>
           <%= link_to "Delete !", comment_path(comment), method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
-<%= link_to "Add a comment", new_post_comment_path(@post) %> <br>
+  <%= render 'shared/new_comment' %>
 <%= link_to 'Back to the list', posts_path %>
   </div>
 </div>
