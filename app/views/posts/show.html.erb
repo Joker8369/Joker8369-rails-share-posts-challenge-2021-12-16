@@ -1,18 +1,27 @@
-<div class ='post'>
-<div class="post-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="post-product-infos">
-    <h2><%= @post.title %></h2>
+<div class='post'>
+<h2><%= @post.title %></h2>
+<div class ='article'>
+  <div class='attachment'>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class ='text'>
+    <p><%= @post.content %></p>
+    <p><%= @post.url %></p>
     <br>
-    <%= @post.content %>
-    <%= @post.url %>
-    <br><br>
+    </div>
+  </div>
+  <div class='container'>
+  <div class ='comment_container'>
     <% @post.comments.each do |comment| %>
-          <%= comment.content%><br>
-          <%= link_to "Delete !", comment_path(comment), method: :delete, data: { confirm: "Are you sure?" } %>
-  <% end %>
-  <%= render 'shared/new_comment' %>
-<%= link_to 'Back to the list', posts_path %>
+    <div class ='comment'>
+    <p><%= comment.content%></p>
+    <% if (user_signed_in? && @user.id == comment.user_id) %>
+    <%= link_to "Delete", comment_path(comment), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-ghost" %> <br>
+    <% end%>
+    </div>
+    <% end %>
+    </div>
+    <%= render 'shared/new_comment' %>
   </div>
 </div>
+<%= link_to 'Back to the list', posts_path,class: "btn btn-ghost" %>
 </div>

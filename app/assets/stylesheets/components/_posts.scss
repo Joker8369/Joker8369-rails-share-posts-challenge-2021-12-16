@@ -1,36 +1,35 @@
 .post {
+  margin-top:calc(7% - 66px);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  h2 {
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+  }
+}
+.article {
   display: flex;
-  justify-content: center;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
-.post-product {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin-top: 10%;
-}
-
-.post-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.attachment{
+width: 50%;
+  .text{
+    padding: 1rem;
+  }
 }
 
-.post-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.attachment img{
+  width: 100%;
+  border-top-left-radius: 10px ;
 }
-
-.post-product p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+.container {
+  width: 50%;
+  padding-right: 0;
 }
-
-.post-product .post-product-infos {
-  padding: 16px;
+.comment_container{
+  padding: 1rem 0rem 1rem 1rem;
+  overflow: auto;
+  max-height: 500px;
 }

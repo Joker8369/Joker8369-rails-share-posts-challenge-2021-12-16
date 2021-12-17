@@ -1,12 +1,26 @@
+.cards{
+  margin-top: 98px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  border: none;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 10%;
+}
+.cards a{
+    color: black;
+    text-decoration: none;
+}
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 10rem;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
-  margin: 4rem 4rem 4rem 4rem;
-  width: 50rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
 }
 
 .card-product img {
@@ -30,5 +44,9 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 2rem;
+  text-align: start;
+}
+.card-product-infos .action {
+  padding-top: 1rem;
 }

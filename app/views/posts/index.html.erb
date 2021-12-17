@@ -1,18 +1,23 @@
-
-<% @posts.each do |post| %>
-<%= link_to post do %>
-<div class="card-product">
-<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-<div class="card-product-infos">
-<h2><%= post.title %></h2>
-<p><%= post.content %></p>
-<p><%= post.url %></p>
-<% if (user_signed_in? && @user.id == post.user_id) %>
-<%= link_to 'Update', edit_post_path(post), method: :get %>
-<%= link_to 'Delete', post_path(post), method: :delete,
-data: { confirm: "Are you sure?" } %>
-<% end %>
+<div class='cards'>
+  <div>
+  <% @posts.each do |post| %>
+    <%= link_to post do %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <h2><%= post.title %></h2>
+          <p><%= post.content %></p>
+          <p><%= post.url %></p>
+          <div class='action'>
+            <% if (user_signed_in? && @user.id == post.user_id) %>
+              <%= link_to 'Update', edit_post_path(post), method: :get, class: "btn btn-ghost" %>
+              <%= link_to 'Delete', post_path(post), method: :delete, class: "btn btn-ghost",
+            data: { confirm: "Are you sure?" } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
 </div>
-</div>
-<% end %>
-<% end %>

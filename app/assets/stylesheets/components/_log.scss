@@ -1,0 +1,14 @@
+.session {
+  height: calc(100% - 66px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.log {
+  border: 1px solid grey;
+  padding: 4rem 4rem;
+  border-radius: 2%;
+}

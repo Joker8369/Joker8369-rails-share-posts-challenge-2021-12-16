@@ -1,0 +1,62 @@
+.btn-ghost {
+  color: white;
+  background-color:#FC7739;
+  opacity: 1;
+  border: 1px solid #FC7739;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.action .btn-ghost {
+  color: white;
+  background-color:#FD9F42;
+  opacity: 0.8;
+  border: 1px solid #FD9F42;
+  padding: 4px 18px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+}
+
+.action .btn-ghost:hover {
+  opacity: 1;
+  color: white;
+}
+
+.comment .btn-ghost, .post-product-infos .btn-ghost, .addcomment .btn-ghost  {
+  color: white;
+  background-color:#FD9F42;
+  opacity: 0.8;
+  border: 1px solid #FD9F42;
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+}
+
+.comment .btn-ghost:hover, .post-product-infos .btn-ghost:hover, .addcomment .btn-ghost:hover   {
+  opacity: 1;
+  color: white;
+}
+.post .btn-ghost{
+  color: white;
+  background-color:#FD9F42;
+  opacity: 0.8;
+  border: 1px solid #FD9F42;
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-weight: lighter;
+  transition: opacity 0.3s ease;
+}
+
+.post .btn-ghost:hover{
+  opacity: 1;
+  color: white;
+}
