@@ -24,6 +24,7 @@ class PostsController < ApplicationController
 
   def show
     @comment = Comment.new
+    @user = current_user
   end
 
   def update

@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
@@ -12,7 +13,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post), notice: "Comment posted 👌"
     else
-      render :new
+      redirect_to post_path(@post), notice: "Comment can't blank"
     end
   end
 
