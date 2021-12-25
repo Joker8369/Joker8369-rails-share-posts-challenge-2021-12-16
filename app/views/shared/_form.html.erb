@@ -1,26 +1,26 @@
 <div class='item'>
-<div class="create">
-<div class="form">
-<%= simple_form_for(@post) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="create">
+    <div class="form">
+      <%= simple_form_for(@post) do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.label "Title"%>
-    <%= f.input :title, label: false%>
-    <%= f.label "Content" %>
-    <%= f.input :content, as: :text,:input_html => {:rows => 10}, label: false%>
-    <%= f.label "Url" %>
-    <%= f.input :url, label: false%>
+      <div class="form-inputs">
+        <%= f.label "Title"%>
+        <%= f.input :title, label: false%>
+        <%= f.label "Content" %>
+        <%= f.input :content, as: :text,:input_html => {:rows => 10}, label: false%>
+        <%= f.label "Url" %>
+        <%= f.input :url, label: false%>
+      </div>
+        <br><br>
+
+      <div class="form-actions">
+        <%= f.button :submit, class: "btn btn-ghost"  %>
+      </div>
+
+      <% end %>
+    </div>
   </div>
-  <br><br>
-
-  <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-ghost"  %>
-  </div>
-
-<% end %>
-</div>
-</div>
-<%= link_to 'Back to the list', posts_path,class: "btn btn-ghost" %>
+  <%= link_to 'Back to the list', posts_path,class: "btn btn-ghost" %>
 </div>

@@ -26,7 +26,7 @@ puts 'users ok'
 Post.destroy_all
 puts 'no posts'
 
-Post.create!(
+post1 = Post.create!(
   title: 'Covid-19. Que faut-il attendre du nouveau Conseil de défense sanitaire, vendredi ?',
   content: 'Réduire le délai avant la dose de rappel ?
 
@@ -43,7 +43,7 @@ L’extension d’Omicron au Royaume-Uni (88 376 nouveaux cas en 24 heures) inqu
   user_id: "#{user1.id}"
 )
 
-Post.create!(
+post2 = Post.create!(
   title: 'SNCF : Les syndicats lèvent l’appel à la grève pour les TGV du Sud-Est',
   content: 'Ascenseur émotionnel pour les voyageurs qui comptaient prendre le train, ce premier week-end des vacances de Noël. Alors que la SNCF avait affirmé mercredi que les négociations avec les syndicats avaient échoué, la CGT-Cheminots et SUD-Rail ont finalement annoncé ce jeudi qu’ils levaient leurs appels à la grève sur l’axe TGV Sud-Est.
 
@@ -51,7 +51,7 @@ Initialement, un TGV sur deux était prévu sur cet axe à partir du vendredi 17
   url: "https://www.20minutes.fr/societe/3199555-20211216-sncf-syndicats-levent-appel-greve-tgv-sud",
   user_id: "#{user1.id}"
 )
-Post.create!(
+post3 = Post.create!(
   title: 'Le réchauffement climatique déstabilise plus que jamais les pôles',
   content: 'Les pôles se dérèglent toujours plus rapidement sous l’effet du changement climatique causé par les activités humaines. Au Nord, l’Arctique est propulsé dans un état radicalement différent de celui dans lequel il se trouvait il y a seulement quelques décennies, avec la neige et la glace qui laissent place à une végétation plus luxuriante et des vagues de chaleur plus fréquentes. Au Sud, l’Antarctique risque de voir une partie de l’un de ses principaux glaciers se désintégrer d’ici à cinq ans, accélérant la débâcle des glaces. Une série de travaux scientifiques, présentés mardi 14 décembre au cours de la réunion d’automne de l’Union américaine de géophysique, décrivent ces changements pour beaucoup irréversibles.
 
@@ -61,3 +61,44 @@ Le rapport annuel « Arctic Report Card », réalisé par 111 scientifiques de d
 )
 
 puts 'posts ok'
+
+Comment.destroy_all
+
+puts 'no Comment'
+
+Comment.create!(
+  content: 'Interessant +1',
+  post_id:"#{post1.id}" ,
+  user_id: "#{user1.id}",
+)
+
+Comment.create!(
+  content: 'Comme d habitude +1',
+  post_id:"#{post2.id}" ,
+  user_id: "#{user1.id}",
+)
+
+Comment.create!(
+  content: 'Cela laisse sans voix +1',
+  post_id:"#{post3.id}" ,
+  user_id: "#{user1.id}",
+)
+
+Comment.create!(
+  content: 'Je me lève +1',
+  post_id:"#{post1.id}" ,
+  user_id: "#{user2.id}",
+)
+
+Comment.create!(
+  content: 'Et je te bouscule +1',
+  post_id:"#{post2.id}" ,
+  user_id: "#{user2.id}",
+)
+Comment.create!(
+  content: 'Tu ne te réveilles pas +1',
+  post_id:"#{post3.id}" ,
+  user_id: "#{user2.id}",
+)
+
+puts 'Comments ok'
